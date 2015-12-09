@@ -1,0 +1,33 @@
+﻿WPF – Inlämningsuppgift 2
+
+Introduktion
+Det är svårt att hitta ett kundregister som passar alla. Problemet
+är att det inte finns något program som innehåller enkla och
+lättanvända funktionaliteter. Många är för krångliga, har onödiga
+fält eller saknar vissa uppgifter som behövs av den egna
+verksamheten.
+Utveckla en enkel WPF-applikation för hantering av
+kunduppgifter.
+
+Skapa ett formulär för inmatning av nya kunder.
+Följande fält behövs:
+ Kundtyp (Radioknappar, antingen privat eller företag)
+ Företag (fältet släcks ner om man väljer privat)
+ Kontaktperson (förnamn och efternamn)
+ Födelsedatum (väljs från en kalender eller DatePicker)
+ Adress (gatuadress, postnummer, Ort)
+ Telefon/Mobil
+ E-post
+ Vill ha nyhetsbrev (Kryssruta)
+ Anteckningar
+OBS! Ett Kundnummer generas automatiskt till varje ny kund (måste vara unikt).
+
+Man ska kunna söka efter en kund med hjälp av kundens telefon/mobil eller epost.
+
+För G-nivå behöver du spara kunder i en CSV-fil (separera fält med semikolon).
+För VG-nivå behöver du spara kunder i en databas, helst MS SQL Server men du får välja en annan
+databashanterare.
+Det räcker med en enda tabell.
+
+Redovisning
+Uppgiften redovisas muntligt den 14 december 2015 på lektionen.
