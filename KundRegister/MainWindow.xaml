@@ -5,8 +5,67 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KundRegister"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        Title="MainWindow" Height="480" Width="600" ResizeMode="NoResize">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="160"/>
+        </Grid.ColumnDefinitions>
         
+        <!--First Column-->
+        <StackPanel Grid.Column="0" Orientation="Vertical" Margin="5">
+            <Label FontWeight="Bold">Register</Label>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton GroupName="MainSelection" Name="rbCompany" Content="Company" Margin="3" Checked="RbCompany_Checked"/>
+                <RadioButton GroupName="MainSelection" Name="rbPrivate" Content="Private" Margin="3" Checked="rbPrivate_Checked"/>
+            </StackPanel>
+            <Label>Company Name:</Label>
+            <TextBox Name="CompanyNameTextBox"/>
+            <Label>First Name:</Label>
+            <TextBox Name="FirstNameTextBox"/>            
+            <Label>Last Name:</Label>
+            <TextBox Name="LastNameTextBox"/>            
+            <Label>Street Name:</Label>
+            <TextBox Name="StreetNameTextBox"/>
+            <Label>Zip Code:</Label>
+            <TextBox Name="ZipCodeTextBox"/>
+            <Label>City:</Label>
+            <TextBox Name="CityTextBox"/>
+        </StackPanel>
+        
+        <!--Second Column-->
+        <StackPanel Grid.Column="1" Orientation="Vertical" Margin="8">
+            <Label>Phone number:</Label>
+            <TextBox Name="PhoneTextBox" Text="{Binding PhoneNumber, UpdateSourceTrigger=PropertyChanged}">
+            </TextBox>
+            <Label>Email:</Label> 
+            <TextBox Name="EmailTextBox"/>
+            <Label>Birth date:</Label>
+            <DatePicker Name="BirthdatePicker"></DatePicker>
+            <CheckBox Name="NewsLetterCheckBox" Content="Subscribe to Newsletter" Margin="5,10,5,5"></CheckBox>
+            <Label>Notes:</Label>
+            <TextBox Name="NotesTextBox" TextWrapping="Wrap" AcceptsReturn="True" Height="75"/>
+            <Button Name="RegisterButton" Width="75" Margin="5" Click="RegisterButton_Click">Register</Button>
+            <Label Name="PhoneInvalid" Foreground="Red"></Label>
+            <Label Name="EmailInvalid" Foreground="Red"></Label>
+            <Label Name="Success" Foreground="Green"></Label>
+        </StackPanel>
+        
+        <!--Third Column-->
+        <StackPanel Grid.Column="2" Margin="5">
+            <Label FontWeight="Bold">Search</Label>
+            <Label>Select search value</Label>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton GroupName="SearchSelection" Name="rbPhone" Content="Phone" Margin="3"/>
+                <RadioButton GroupName="SearchSelection" Name="rbEmail" Content="Email" Margin="3"/>
+            </StackPanel>
+            <Label>Enter search term here:</Label>
+            <TextBox HorizontalAlignment="Left" Name="SearchBox" Width="150"/>
+            <Button Name="SearchButton" Width="75" Margin="5" HorizontalAlignment="Left" Click="SearchButton_Click">Search</Button>
+        </StackPanel>
     </Grid>
 </Window>
