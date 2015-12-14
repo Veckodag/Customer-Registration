@@ -69,6 +69,10 @@
     <Compile Include="Migrations\201512140141062_InitialCreate.Designer.cs">
       <DependentUpon>201512140141062_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512141025017_CustomerContext.cs" />
+    <Compile Include="Migrations\201512141025017_CustomerContext.Designer.cs">
+      <DependentUpon>201512141025017_CustomerContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SearchResult.xaml.cs">
       <DependentUpon>SearchResult.xaml</DependentUpon>
@@ -107,6 +111,9 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201512140141062_InitialCreate.resx">
       <DependentUpon>201512140141062_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512141025017_CustomerContext.resx">
+      <DependentUpon>201512141025017_CustomerContext.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

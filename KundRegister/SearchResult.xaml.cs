@@ -28,6 +28,16 @@ namespace KundRegister
         {
             InitializeComponent();
             DataContext = selectedCustomer;
+            CheckIfCustomerIsEmpty(selectedCustomer);
+        }
+
+        private void CheckIfCustomerIsEmpty(Customer selectedCustomer)
+        {
+            if (selectedCustomer == null)
+            {
+                SearchLabel.Content = "Could not find the person you searched for";
+                SearchLabel.Foreground = Brushes.Red;
+            }
         }
     }
 }
