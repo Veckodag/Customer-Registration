@@ -86,7 +86,7 @@ namespace KundRegister
 
             _customer = new Customer(companySelected, FirstNameTextBox.Text, LastNameTextBox.Text, 
                 BirthdatePicker.DisplayDate, StreetNameTextBox.Text, ZipCodeTextBox.Text, CityTextBox.Text,
-                PhoneTextBox.Text, EmailTextBox.Text, wantsNewsLetter, NotesTextBox.Text);
+                PhoneTextBox.Text, EmailTextBox.Text, wantsNewsLetter, NotesTextBox.Text, CompanyNameTextBox.Text);
 
             DatabaseSaving(_customer);
         }

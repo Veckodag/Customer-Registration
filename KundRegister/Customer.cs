@@ -25,12 +25,13 @@ namespace KundRegister
         public string Email { get; set; }
         public bool WantNewsLetter { get; set; }
         public string Notes { get; set; }
+        public string CompanyName { get; set; }
 
         public Customer()
         {
             
         }
-        public Customer(bool isCompany, string firstName, string lastName, DateTime birthDate, string streetName, string zipCode, string city, string phoneNumber, string email, bool wantNewsLetter, string notes)
+        public Customer(bool isCompany, string firstName, string lastName, DateTime birthDate, string streetName, string zipCode, string city, string phoneNumber, string email, bool wantNewsLetter, string notes, string companyName)
         {
             IsCompany = isCompany;
             FirstName = firstName;
@@ -43,6 +44,7 @@ namespace KundRegister
             Email = email;
             WantNewsLetter = wantNewsLetter;
             Notes = notes;
+            CompanyName = companyName;
         }
     }
 }
